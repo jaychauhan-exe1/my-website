@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Zalando_Sans_Expanded, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ZalandoSansExpanded = Zalando_Sans_Expanded({
+  variable: "--font-zalando-sans-expanded",
   subsets: ["latin"],
+  fallback: ["system-ui", "Arial", "sans-serif"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
 });
 
@@ -25,9 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ZalandoSansExpanded.variable} ${nunitoSans.variable} antialiased`}
       >
-        {children}
+        <div className="max-w-480 w-[90%] mx-auto">
+          <Navbar />
+          {children}
+        </div>
+        
       </body>
     </html>
   );
