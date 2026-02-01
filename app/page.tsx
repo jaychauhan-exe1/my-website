@@ -1,17 +1,17 @@
 "use client";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
-import { CiPhone } from "react-icons/ci";
+import { CiPhone, CiLinkedin } from "react-icons/ci";
 import { BsDownload } from "react-icons/bs";
 import { motion } from "motion/react";
 import Carousel from "@/components/Carousel";
 
+import { Socials } from "@/components/ui/Socials";
+
 
 
 export default function Home() {
-  const content ={
-    email: "work.jaysinghchauhan.com"
-  }
+  const Email = "work.jaysinghchauhan.com";
   const projects = [
     {
       title: "Project One",
@@ -29,6 +29,25 @@ export default function Home() {
       bg_color: "#FF32E5",
     },
   ];
+  const socials = [
+    {
+      name: "GitHub",
+      link: "https://github.com/jaychauhan-exe1",
+    },
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/jaychauhan.exe/",
+    },
+    {
+      name: "Discord",
+      link: "https://discord.com/users/jaychauhan.exe",
+    },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/jaychauhanexe/",
+    },
+  ];
+
   return (
     <main className="">
       <section className="hero global">
@@ -59,11 +78,14 @@ export default function Home() {
                   <BsDownload size={18} />
                 </motion.div>
               </Link>
+              <div className="mt-12">
+                <Socials socials={socials} />
+              </div>
             </div>
           </div>
           <div className="w-full">
             <p>Where creativity meets technology to craft digital solutions and experiences that help businesses grow and scale.</p>
-            <Button varient="primary" >{content.email}</Button>
+            <Button varient="primary" >{Email}</Button>
           </div>
         </div>
       </section>
