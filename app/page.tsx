@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 import Carousel from "@/components/Carousel";
 
 import { Socials } from "@/components/ui/Socials";
+import { InnerSection } from "@/components/ui/InnerSection";
 
 
 
@@ -96,7 +97,8 @@ export default function Home() {
         ><Carousel content={projects} /> </motion.div>      
       </section>
       <section>
-        <div className="h-screen">dfsd</div>
+        <InnerSection />
+
       </section>
       
      
