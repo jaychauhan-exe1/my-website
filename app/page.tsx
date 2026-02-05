@@ -92,9 +92,9 @@ export default function Home() {
       </section>
       <section className="home-projects global">
         
-        <motion.div className=""
+        <motion.div className="h-screen"
         
-        ><Carousel content={projects} /> </motion.div>      
+        > </motion.div>      
       </section>
       <section>
         <InnerSection />
